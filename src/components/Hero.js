@@ -9,8 +9,18 @@ import fb from './assets/ico-fb@2x.svg'
 import heroImg from './assets/hero-background-cropped.png'
 
 const Hero = () => {
+
+  const scrollToVideos = () => {
+    let elem = document.getElementById("videos");
+    var scrollDiv = document.getElementById("videos").offsetTop;
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
+  }
+
+
+
   return (
-    <div id="hero">
+    <div id="hero" >
+
       <div>
         <img src={heroImg} alt="hero" className="hero-img"/>
       </div>
@@ -39,9 +49,7 @@ const Hero = () => {
         <div className="hero-title">
           <h3>Check out on splice</h3>
           <h1>Murda Beatz' quarantize kit sample kit</h1>
-          <a href="#">
-          <button type="button" className="mt-4">Listen Now</button>
-          </a>
+          <button type="button" onClick={scrollToVideos} className="mt-4">Listen Now</button>
         </div>
     </div>
   )

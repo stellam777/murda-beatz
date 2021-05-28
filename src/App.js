@@ -7,10 +7,12 @@ import Tours from './components/Tours';
 import Store from './components/Store';
 import Photos from './components/Photos';
 import Videos from './components/Videos';
+import Subscribe from './components/Subscribe';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App justify-content-center'>
       <Nav />
       <Hero />
       <Releases />
@@ -18,6 +20,8 @@ function App() {
       <Videos />
       <Store />
       <Photos />
+      <Subscribe />
+      <Footer />
     </div>
   );
 }

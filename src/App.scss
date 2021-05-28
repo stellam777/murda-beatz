@@ -10,52 +10,51 @@ $bold: 800;
 
 body {
   background: $yellow;
-  margin: 0;
+  margin: 0 auto;
 }
+
+html, body {width: auto!important; overflow-x: hidden!important}
 
 ul {
   list-style: none;
 }
 
-h1 {
-  font-family: $titleFont;
-  font-size: 57px;
-  font-weight: $bold;
+h1, h2, h3, h4, h5, p {
+  font: $titleFont;
   text-transform: uppercase;
+  font-weight: $bold;
+  color: $black;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 57px;
   width: 40%;
   line-height: 50px;
-  color: $black;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-family: $titleFont;
   font-size: 70px;
-  text-transform: uppercase;
-  font-weight: $bold;
-  margin: 0 0 30px 110px;
-  padding-top: 40px;
+  //margin: 0 0 30px 110px;
+  //padding-top: 40px;
+  margin-bottom: 0;
+  letter-spacing: 14px;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
-  letter-spacing: 14px;
 }
 
 h3 {
   font-family: $secondaryFont;
   font-weight: $normal;
-  color: $black;
-  text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 3.33333px;
 }
 
 h4 {
-  font-family: $titleFont;
-  font-weight: $bold;
   font-size: 24px;
   color: white;
-  text-transform: uppercase;
 }
 
 h5 {
@@ -67,10 +66,7 @@ h5 {
 p {
   margin-bottom: 0;
   color: $yellow;
-  font-family: $titleFont;
   font-size: 16px;
-  font-weight: $bold;
-  text-transform: uppercase;
 }
 
 button {
@@ -83,12 +79,16 @@ button {
   border-radius: 500px;
   background-color: $yellow;
   color: $black;
-  border: 1px solid $yellow;
+  border: 2px solid $yellow;
 
   &:hover {
     background-color: transparent;
     color: $yellow;
     cursor: pointer;
+  }
+
+  &:focus {
+    outline:0;
   }
 }
 
@@ -117,6 +117,8 @@ nav {
 }
 
 #hero {
+  height: 45vh;
+
   .hero-img {
     position: absolute;
     right: 240px;
@@ -159,36 +161,22 @@ nav {
 
 #releases {
   background: linear-gradient(to right, #404040 62%, #282828 0%);
-  height: 840px;
 
   .album-image1 {
     object-fit: cover;
-    width: 548px;
-    height: 539px;
-    margin-right: 10px;
+    width: 533px;
+    height: 524px;
     filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.3));
   }
 
   .album-image2 {
-    margin-left: 10px;
-  }
-
-  button {
-    margin: 30px 130px 30px 0;
+    width: 548px;
+    height: 539px;
   }
 }
 
 #tours {
   background: $black;
-  height: 770px;
-
-  .tour-left {
-    margin-left: 90px;
-  }
-
-  .tour-right {
-    margin-right: 150px;
-  }
 
   span {
     font-weight: $normal;
@@ -200,27 +188,38 @@ nav {
     border-bottom: none;
     position: relative;
     padding-bottom: 20px;
+
+    a {
+      color: $yellow;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid $yellow;
+      }
+    }
   }
 
-  .tour-item:after {
-    content:"";
-    background: -webkit-linear-gradient(left, rgba(246, 200, 42, 0.2) 0%, rgba(246, 200, 42, 0.4) 49.33%, rgba(246, 200, 42, 0.2) 100%);
-    display: block;
-    height: 1px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
+  .tour-item:nth-child(1), .tour-item:nth-child(2) {
 
-  button {
-    margin: 50px 130px 30px 0;
+    &:after {
+      content:"";
+      background: -webkit-linear-gradient(left, rgba(246, 200, 42, 0.2) 0%, rgba(246, 200, 42, 0.4) 49.33%, rgba(246, 200, 42, 0.2) 100%);
+      display: block;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
 
 #store {
-  height: 800px;
 
-  .store-img {
+  .product-image {
+    object-fit: cover;
+    width: 397px;
+    height: 397px;
+
     border-radius: 6px;
     filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.5));
     transition: all 0.3s;
@@ -230,12 +229,6 @@ nav {
       transform: scale(1.03);
       transition: all 0.3s;
     }
-  }
-
-  .product-image {
-    object-fit: cover;
-    width: 397px;
-    height: 397px;
   }
 
   h2 {
@@ -251,7 +244,6 @@ nav {
   p {
     color: $black;
     font-size: 26px;
-    width: 90%;
     line-height: 25px;
     margin-top:20px;
   }
@@ -260,7 +252,6 @@ nav {
     background-color: black;
     color: $yellow;
     border-color: $black;
-    margin: 40px 130px 0px 0;
 
     &:hover {
       background-color: transparent;
@@ -272,18 +263,115 @@ nav {
 
 #photos {
   background: $black;
-  height: 900px;
 
   .gallery {
-    margin: 6px;
-  }
+    object-fit: cover;
+    width: 248px;
+    height: 248px;
+    transition: all 0.3s;
 
-  button {
-    margin: 60px 130px 30px 0;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: all 0.3s;
+    }
   }
 }
 
 #videos {
   background: #282828;
-  height: 800px;
+  height: 800px
+}
+
+#subscribe {
+  background: #282828;
+
+  .sub {
+    width: 53%;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  h4 {
+    color: $yellow;
+    font-size: 16px;
+  }
+
+  span {
+    color: white;
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: transparent;
+    height: 16px;
+    width: 16px;
+    border: 1px solid $yellow;
+  }
+
+  input[type="checkbox"]:checked {
+    background: transparent;
+  }
+
+  input[type="checkbox"]:hover {
+    filter: brightness(90%);
+  }
+
+  input[type="checkbox"]:disabled {
+    background: transparent;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  input[type="checkbox"]:after {
+    content: "\2713";
+    position: relative;
+    bottom: 12px;
+    left: 5px;
+    //top: 10%;
+    // width: 100%;
+    // height: 100%;
+    border: solid $yellow;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+
+  input[type="checkbox"]:checked:after {
+    display: block;
+  }
+
+  input[type="checkbox"]:disabled:after {
+    border-color: $yellow;
+  }
+
+  #email, select {
+    border: 0;
+    outline: 0;
+    color: white;
+    background: transparent;
+    border-bottom: 1px solid $yellow;
+    padding-left: 0px;
+  }
+
+  ::placeholder, select {
+      color: $yellow;
+      font-family: $titleFont;
+      font-size: 20px;
+      text-transform: uppercase;
+  }
+}
+
+#footer {
+  background: black;
+
+  p {
+    cursor: pointer;
+  }
 }

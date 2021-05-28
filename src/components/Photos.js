@@ -13,25 +13,45 @@ import murdaBeatz10 from './assets/murda-beatz10.png';
 
 const Photos = () => {
   return (
-    <div id="photos">
-      <h2>Photos</h2>
-      <div className="row justify-content-center no-gutters">
-        <img className="col-2 gallery" src={murdaBeatz1} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz2} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz3} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz4} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz5} alt="Murda Beatz"/>
+    <div id="photos" className="row justify-content-center">
+      <div className="col m-5">
+        <h2 className="ml-4 mb-2">Photos</h2>
+        <div className="row justify-content-around pt-4 pb-5" align="center">
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz1} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz2} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz3} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz4} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz5} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz6} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz7} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz8} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz9} alt="Murda Beatz"/>
+          </div>
+          <div className="col-lg-2 col-md-4 m-1 mb-4">
+            <img className="gallery" src={murdaBeatz10} alt="Murda Beatz"/>
+          </div>
+        </div>
+        <a href="#photos">
+          <button type="button" className="float-right mr-4 mt-0">View All Photos</button>
+        </a>
       </div>
-      <div className="row justify-content-center no-gutters">
-        <img className="col-2 gallery" src={murdaBeatz6} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz7} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz8} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz9} alt="Murda Beatz"/>
-        <img className="col-2 gallery" src={murdaBeatz10} alt="Murda Beatz"/>
-      </div>
-      <a href="#">
-        <button type="button" className="float-right">View All Dates</button>
-      </a>
     </div>
   )
 }
