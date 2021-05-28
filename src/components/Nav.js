@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import logo from './assets/MBlogowhite_x300.svg';
 
@@ -7,24 +6,25 @@ const Nav = () => {
   return (
     <div className='d-flex justify-content-between m-4 align-items-top'>
       <div>
-        <img className='logo' src={logo} />
+        <img className='logo ml-4' src={logo} alt="Murda Beatz logo"/>
       </div>
-      <nav>
+      <nav className="mr-4">
         <ul className='row'>
           <li className='col'>
-            <Link to='#releases'>Releases</Link>
+            {/* <Link to='#releases'>Releases</Link> */}
+            <a href='#releases'>Releases</a>
           </li>
           <li className='col'>
-            <Link to='#videos'>Videos</Link>
+            <a href='#videos'>Videos</a>
           </li>
           <li className='col'>
-            <Link to='#store'>Store</Link>
+            <a href='#store'>Store</a>
           </li>
           <li className='col'>
-            <Link to='#photos'>Photos</Link>
+            <a href='#photos'>Photos</a>
           </li>
           <li className='col'>
-            <Link to='#subscribe'>Subscribe</Link>
+            <a href='#subscribe'>Subscribe</a>
           </li>
         </ul>
       </nav>
