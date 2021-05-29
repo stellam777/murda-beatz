@@ -48,9 +48,11 @@ const Photos = () => {
             <img className="gallery" src={murdaBeatz10} alt="Murda Beatz"/>
           </div>
         </div>
-        <a href="#photos">
-          <button type="button" className="float-right mr-4 mt-0">View All Photos</button>
-        </a>
+        <div className="text-center">
+          <a href="#photos">
+            <button type="button" className="float-lg-right mr-4 mt-0">View All Photos</button>
+          </a>
+        </div>
       </div>
     </div>
   )

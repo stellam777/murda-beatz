@@ -83,9 +83,11 @@ const Tours = () => {
           </div>
         </div>
       </div>
-      <a href="#tours">
-        <button type="button" className="float-right mr-4 mt-0">View All Dates</button>
-      </a>
+      <div className="text-center">
+        <a href="#tours">
+          <button type="button" className="float-lg-right mr-4 mt-0">View All Dates</button>
+        </a>
+      </div>
       </div>
     </div>
   );

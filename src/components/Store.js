@@ -26,9 +26,11 @@ const Store = () => {
             <h5>$1.29</h5>
           </div>
         </div>
-        <a href="#store">
-          <button type="button" className="float-right mr-4 mt-0">Shop All</button>
-        </a>
+        <div className="text-center">
+          <a href="#store">
+            <button type="button" className="float-lg-right mr-4 mt-0">Shop All</button>
+          </a>
+        </div>
       </div>
     </div>
   )
