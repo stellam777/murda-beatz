@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Card = ({ image }) => {
+const Card = ({ image, artist, title, index, currImage }) => {
 
     return (
         <div className="card">
-          <img className="vid-thumbnail" src={image} alt="image" />
+          <img className="vid-thumbnail" src={image} alt="Murda Beatz Video" />
         </div>
     )
 }
