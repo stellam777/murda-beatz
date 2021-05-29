@@ -1,9 +1,7 @@
 # Murda Beatz | Halo Media Coding Assessment
 
 ## Tech Stack
--React
--Bootstrap
--Scss
+React, Bootstrap, Scss
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
