@@ -11,7 +11,6 @@ import heroImg from './assets/hero-background-cropped.png'
 const Hero = () => {
 
   const scrollToVideos = () => {
-    let elem = document.getElementById("videos");
     var scrollDiv = document.getElementById("videos").offsetTop;
     window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
   }
@@ -48,7 +47,7 @@ const Hero = () => {
       </div>
         <div className="hero-title">
           <h3>Check out on splice</h3>
-          <h1>Murda Beatz' quarantize kit sample kit</h1>
+          <h1>Murda Beatz' quarantine kit sample pack</h1>
           <button type="button" onClick={scrollToVideos} className="mt-4">Listen Now</button>
         </div>
     </div>
